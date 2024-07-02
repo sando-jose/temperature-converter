@@ -5,7 +5,10 @@
  * @param {string} fahren temperature in degrees F
  * @returns {number} the number of degrees C
  */
-function convertToCelsius(fahren) {}
+function convertToCelsius(fahren) {
+  celc = (fahren - 32) * (5 / 9);
+  return Number(celc);
+}
 
 /**
  * Takes both numbers (F, C) and display a message with
@@ -22,7 +25,26 @@ function convertToCelsius(fahren) {}
  * @param {number} fahren
  * @param {number} celc
  */
-function createMessage(fahren, celc) {}
+
+function createMessage(fahren, celc) {
+  if (fahren < 32) {
+    prompt(
+      `The current temperature is ${fahren}, in celsius ${celc}. It is very cold.`
+    );
+  } else if (fahren < 64) {
+    prompt(
+      `The current temperature is ${fahren}, in celsius ${celc}. It is cold.`
+    );
+  } else if (fahren < 86) {
+    prompt(
+      `The current temperature is ${fahren}, in celsius ${celc}. It is warm.`
+    );
+  } else if (fahren < 100) {
+    prompt`The current temperature is ${fahren}, in celsius ${celc}. It is hot.`;
+  } else {
+    prompt`The temperature is ${fahren}, which is ${celc} celsius. You might need an ice pack on your head.`;
+  }
+}
 
 /**
  * Takes a number and returns a random integer from 0 to the limit
@@ -34,7 +56,7 @@ function rand(limit) {}
 // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
 
 let fahren = prompt(
-  "enter a number, we will convert that number from fahrenheit to celcius"
+  "Enter a number, we will convert that number from fahrenheit to celcius"
 );
 let celc = convertToCelsius(fahren);
 let output = createMessage(fahren, celc);
