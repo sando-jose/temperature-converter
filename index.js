@@ -52,7 +52,9 @@ function createMessage(fahren, celc) {
  * @param {number} limit
  * @returns {number} a number between 0 and the int passed in
  */
-function rand(limit) {}
+function rand(limit) {
+  console.log(Mathfloor(Math.random() * 110));
+}
 
 // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
 
