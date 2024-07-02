@@ -5,9 +5,10 @@
  * @param {string} fahren temperature in degrees F
  * @returns {number} the number of degrees C
  */
+
 function convertToCelsius(fahren) {
-  celc = (fahren - 32) * (5 / 9);
-  return Number(celc);
+  var celc = (fahren - 32) * (5 / 9);
+  return celc;
 }
 
 /**
